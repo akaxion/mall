@@ -9,7 +9,7 @@
 	{
 		echo "
 		<script>
-			window.alter('$msg');
+			window.alert('$msg');
 			history.go(-1);
 		</script>";
 		exit;
@@ -18,7 +18,7 @@
 	{
 		echo"
 		<script>
-			window.alter('$msg');
+			window.alert('$msg');
 		</script>";
 	}
 	function check_pass($pass, $c_pass) //패스워드 일치 여부 검사

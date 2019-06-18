@@ -11,7 +11,7 @@
 		</p>
 		<p>
 			<input type = "submit" name = "button2" value = "로그인"/>
-			<a href = "signup.php">회원가입</a>
+			<a href = "join.php">회원가입</a>
 		</p>
 	</form>
 	</center>

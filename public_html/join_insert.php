@@ -7,8 +7,8 @@ $connect = dbconnect($host, $dbid, $dbpass, $dbname);
 $id = $_POST['txt_ID'];
 $pass = $_POST['passwd'];
 $c_pass = $_POST['c_passwd'];
-$name = $_POST['name'];
-$phone = $_POST['phone'];
+$name = $_POST['txt_name'];
+$phone = $_POST['txt_phone'];
 $add = $_POST['txt_add'];
 
 $ret = mysql_query("select member_id from member where member_id = '$id'", $connect);
@@ -30,7 +30,7 @@ else
 	$insert_ret = mysql_query($insert_query, $connect);
 	if(!insert_ret)
 	{
-		msg("DB에 에러가 발생!")
+		msg('DB에 에러가 발생!');
 	}
 	else
 	{

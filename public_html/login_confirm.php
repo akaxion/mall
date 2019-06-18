@@ -16,15 +16,15 @@ if(!$mem_num) //id로 검색된 회원이 없을 경우
 }
 else
 {
-	$mem_array = mysql_fetch_arry($mem_ret);
+	$mem_array = mysql_fetch_array($mem_ret);
 	$db_name = $mem_array[name];
 	$db_pass = $mem_array[password];
 	$db_admin = $mem_array[admin];
 	if($db_pass == $pass)
 	{
 		SetCookie("cookie_id", $id, 0, "/"); //0: browser lifttime - 0 or omitted: end of sessions
-		SetCookie("cookie_name" $db_name, 0, "/");
-		SetCookie("cookie_admin", $db_admin, 0, "/") //available with in the entire domain
+		SetCookie("cookie_name", $db_name, 0, "/");
+		SetCookie("cookie_admin", $db_admin, 0, "/"); //available with in the entire domain
 		echo "<meta http-equiv = 'refresh' content = '0; url = product_list.php'>";
 	}
 	else
